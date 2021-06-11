@@ -1,11 +1,38 @@
+
+h1 {
+  text-align: center;
+  color: crimson;
+}
+
+body {
+  background-color: lightseagreen;
+}
+
 .form {
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
 
 .form-group{
-  font-size: 20px;
-  color: blue;
+  font-size: 15px;
+  color: red;
   font-weight: 500;
 }
+
+.content{
+  padding-bottom: 60px;
+  padding-top: 20px;
+  margin-left: 10%;
+  margin-right: 70%;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-radius: 0%;
+  background-color: darkgray;
+}
+
+.container{
+  width: 100%;
+  margin:10;
+}
+
 
