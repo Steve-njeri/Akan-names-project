@@ -10,9 +10,13 @@
 </head>
 <body>
   <h1>Akan names derived from Ghanian culture</h1>
+  <h2>Get your Akan Name</h2>
+  <p>
+    Find out what your Akan name is, proceed to filling the form below and click the submit button.
+  </p>
   <div class="content">
     <div class="container">
-      <form class="myForm" name="form" onsubmit="return getAkanName();">
+      <form class="myForm" name="form" onSubmit="akanName();">
         <div class="form-group">
           <label for="year">Year of Birth:</label>
           <input type="number" class="form-control" placeholder="YYYY" id="year">
@@ -23,22 +27,19 @@
         </div>
         <div class="form-group">
           <label for="date">Day of Birth:</label>
-          <input type="number" class="form-control" placeholder="DD" id="date">
+          <input type="number" class="form-control" placeholder="DD" id="day">
         </div>
         <br>
-        <div class="custom-control custom-radio custom-control-inline">
-          <input type="radio" class="custom-control-input" id="male" value="male" name="gender">
-          <label class="custom-control-label" for="male">Male</label>
-        </div>
-        <div class="custom-control custom-radio custom-control-inline">
-          <input type="radio" class="custom-control-input" id="female" value="female" name="gender">
-          <label class="custom-control-label" for="female">Female</label>        
-        </div>
+        <select name="" id="gender">
+          <option value="..select..">..select..</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
         <div class="form-group">
-          <button class="btn btn-primary " name="submit" id="submit" type="button">Submit</button>
+          <button class="btn btn-primary " onclick="akanName()"  name="submit" id="submit" type="button">Submit</button>
         </div>
-        <div id="Akan-name"></div>
       </form>
+      <div id="Akan-name">Output</div>
     </div>
   
   </div>

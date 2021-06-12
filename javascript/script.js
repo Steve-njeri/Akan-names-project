@@ -1,27 +1,24 @@
-function getAkanName () {
+function akanName () {
     let yearOfBirth = document.getElementById("year").value;
     let monthOfBirth = Number(document.getElementById("month").value);
     let dayOfBirth = Number(document.getElementById("day").value);
-    let genders = document.getElementsByName("gender");
+    let genders = document.getElementById("gender").value;
 
-    document.getElementById("submit").onclick = function () {
-        let gender, bdate;
-        bdate = date_input.value;
-        if (male.checked) {
-            gender = "male";
-        } else if (female.checked) {
-            gender = "female";
-        } else {
-            return false; 
-        `;
-        }
-    }
+    CC = parseInt(yearOfBirth.substr(0,2));
+    YY = parseInt(yearOfBirth.substr(2,4));
+    MM = parseInt(monthOfBirth);
+    DD = parseInt(dayOfBirth);
+    
+    let d = Math.floor(( ( (CC/4) -2*CC-1) + ( (5*YY/4) ) + ((26*(MM+1)/10) ) + DD)%7);
+    console.log(d);
+}
 
 
+function getAkanName () {
+    
 
     //formula to determine day of birth 
     function calculateDayValue(){
-        year = document.getElementById("year").value;
         CC = parseInt(year.substring(0,2));
         YY = parseInt(year.substring(2,4));
         MM = parseInt(document.getElementById("month").value);
@@ -88,4 +85,3 @@ function getAkanName () {
     }    
         
 }
-    
