@@ -5,24 +5,33 @@ function getAkanName () {
     let genders = document.getElementsByName("gender");
 
     //lets calculate the function gender
-    function getGender () {
-        for (let gender of genders) {
-            if (gender.checked) {
-                return gender.value;
-
-            }
+    function getGender() {
+        var genders = document.getElementsByName("gender");
+        if(genders[0].checked == true){
+            var gender = "male";
         }
-    }
-}
+        else if(genders[1].checked == true){
+            var gender = "female";
+        }
+        else{
+            return false;
+        }
 
-let myGenderValue = getGender ();
-console.log(myGenderValue);
-
-// Next thing we are going to validate our functions
-function monthValidator () {
-    if (monthOfBirth < 1 || monthOfBirth > 12 ) {
-        return false;
-    } else {
-        return true
     }
+
+    //formula to determine day of birth 
+    function calculateDayValue(){
+        year = document.getElementById("year").value;
+        CC = parseInt(year.substring(0,2));
+        YY = parseInt(year.substring(2,4));
+        MM = parseInt(document.getElementById("month").value);
+        DD = parseInt(document.getElementById("date").value);
+        d = ( ( (CC/4) -2*CC-1) + ( (5*YY/4) ) + ((26*(MM+1)/10) ) + DD)%7;
+        console.log(d);
+        return (Math.floor(d));
+    }
+        
 }
+    
+
+
