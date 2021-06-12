@@ -3,9 +3,7 @@ function akanName () {
     let monthOfBirth = Number(document.getElementById("month").value);
     let dayOfBirth = Number(document.getElementById("day").value);
     let gender = document.getElementById("gender").value;
-
-    //validating inputs
-
+    
     CC = parseInt(yearOfBirth.substr(0,2));
     YY = parseInt(yearOfBirth.substr(2,4));
     MM = parseInt(monthOfBirth);
@@ -42,4 +40,4 @@ function akanName () {
     document.getElementById("dayOfTheWeek").innerHTML = dayOfWeek;
     document.getElementById("akanName").innerHTML = name;
 
-}
+} 

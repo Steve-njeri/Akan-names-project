@@ -9,7 +9,7 @@ body {
   background-image: url('../images/p.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: gold;
 }
 
 .form {
@@ -18,29 +18,34 @@ body {
 }
 
 .form-group{
-  font-size: 15px;
-  color: red;
+  font-size: 13px;
+  color: black;
   font-weight: 500;
 }
 
 .content{
-  padding-bottom: 60px;
+  padding-bottom: 10px;
   padding-top: 20px;
   margin-left: 10%;
   margin-right: 70%;
   margin-top: 20px;
   margin-bottom: 5px;
   border-radius: 0%;
-  background-color: darkgray;
+  background-color: teal;
 }
 
 .container{
   width: 100%;
-  margin:10;
+  margin: 0px;;
 }
 
 #gender {
   margin-bottom: 5px;
 }
 
-
+.form-control,
+.form-select {
+    display: block;
+    width: 40%;
+    margin-bottom: 10px;
+}
