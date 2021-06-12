@@ -1,6 +1,5 @@
 # Akan-name-Project
 #### A web aplication that calculates your Akan name from your birthday and gender
-By Brian Njogu
 #### By Stephen njeri
 ## Description
 This is a simple web application that checks your gender and birthday and simply calculates your Akan name depending on the spwcific day of the week you were born. The Akan names come from a Ghana, where they are used when naming children.
