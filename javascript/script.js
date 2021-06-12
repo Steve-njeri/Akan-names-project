@@ -11,15 +11,6 @@ function akanName () {
     
     let d = Math.floor(( ( (CC/4) -2*CC-1) + ( (5*YY/4) ) + ((26*(MM+1)/10) ) + DD)%7);
 
-     //lets calculate gender
-     if (gender === "male") {
-         console.log("male")
-     }else if (gender === "female") {
-         console.log("female")
-     }else {
-         alert("select gender")
-     }
-
      //Arrays of days of the week and of Ghananin Akan names for males & females
      let daysOfWeek = [
         "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
@@ -36,7 +27,20 @@ function akanName () {
     let dayOfWeek = daysOfWeek[d];
     console.log(dayOfWeek);
 
-       
+    //lets calculate gender
+    let name;
+    if (gender === "male") {
+        name = maleAkanNames[d];
+    }else if (gender === "female") {
+        name = femaleAkanNames[d];
+    }else {
+        alert("select gender")
+    }
+
+    console.log(name);
+
+    //displaying to the html
+
 }
 
 
