@@ -38,11 +38,30 @@ function getAkanName () {
 
     let maleAkanNames = [
         "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"
-    ]
+    ];
 
+    let femaleAkanNames = [
+        "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"
+    ];
 
+    //validate index value
+    let index;
+    if (dayOfWeekNumber == 0){
+        index=6
+    }
+    else{
+        index = dayOfWeekNumber - 1;
+    }
+    console.log(index);
+
+    //validation variables
+    let monthValid = monthValidator();
+    let dayValid = dayValidator();
+
+    if (myGenderValue == "male" && monthValid && dayValid) {
+        document.getElementById('result').textContent = "You were born on a " + daysOfWeek[index] + " , your Akan name is " + maleAkanNames[index];
+        document.getElementById('display-name').textContent = "Here is your Akan name: ";
+    }
         
 }
     
-
-
