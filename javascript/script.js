@@ -4,6 +4,21 @@ function getAkanName () {
     let dayOfBirth = Number(document.getElementById("day").value);
     let genders = document.getElementsByName("gender");
 
+    document.getElementById("submit").onclick = function () {
+        let gender, bdate;
+        bdate = date_input.value;
+        if (male.checked) {
+            gender = "male";
+        } else if (female.checked) {
+            gender = "female";
+        } else {
+            return false; 
+        `;
+        }
+    }
+
+
+
     //formula to determine day of birth 
     function calculateDayValue(){
         year = document.getElementById("year").value;
@@ -59,9 +74,18 @@ function getAkanName () {
     let dayValid = dayValidator();
 
     if (myGenderValue == "male" && monthValid && dayValid) {
-        document.getElementById('result').textContent = "You were born on a " + daysOfWeek[index] + " , your Akan name is " + maleAkanNames[index];
+        document.getElementById('Akan-name').textContent = "You were born on a " + daysOfWeek[index] + " , your Akan name is " + maleAkanNames[index];
         document.getElementById('display-name').textContent = "Here is your Akan name: ";
+        return false;
     }
+    if (myGenderValue == "female" && monthValid && dayValid) {
+        document.getElementById('Akan-name').textContent = "You were born on a " + daysOfWeek[index] + " , your Akan name is " + femaleAkanNames[index];
+        document.getElementById('display-name').textContent = "Here is your Akan name: ";
+        return false;
+    }
+    else {
+        alert("You entered an invalid day or month, please try again");
+    }    
         
 }
     
