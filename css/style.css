@@ -17,13 +17,13 @@ body {
   padding-bottom: 30px;
 }
 
-.form-group{
+.form-group {
   font-size: 13px;
   color: black;
   font-weight: 500;
 }
 
-.content{
+.content {
   padding-bottom: 10px;
   padding-top: 20px;
   margin-left: 10%;
@@ -48,4 +48,8 @@ body {
     display: block;
     width: 40%;
     margin-bottom: 10px;
+}
+
+#dayOfTheWeek,#akanName,.label {
+  display: inline-block;
 }

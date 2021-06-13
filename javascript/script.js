@@ -3,6 +3,19 @@ function akanName () {
     let monthOfBirth = Number(document.getElementById("month").value);
     let dayOfBirth = Number(document.getElementById("day").value);
     let gender = document.getElementById("gender").value;
+
+    //validating inputs
+    if (yearOfBirth.length !== 4){
+        alert("invalid year")
+    }
+
+    if (parseInt(monthOfBirth) < 1 || parseInt(monthOfBirth) > 12 ){
+        alert("invalid month")
+    }
+
+    if (parseInt(dayOfBirth) < 1 || parseInt(dayOfBirth) > 31 ){
+        alert("invalid date")
+    }
     
     CC = parseInt(yearOfBirth.substr(0,2));
     YY = parseInt(yearOfBirth.substr(2,4));
